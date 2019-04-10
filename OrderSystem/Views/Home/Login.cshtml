@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <form method="post" action="/home/loginValidate">
+
+        <div class="row">
+            <div class="col-sm-3">
+                Email ID:
+            </div>
+            <div class="col-sm-9">
+                <input type="text" name="emailid" id="emailid" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                Password:
+            </div>
+            <div class="col-sm-9">
+                <input type="password" name="password" id="password" />
+            </div>
+        </div>
+
+        <div class=" row">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <div>
+            <span class="text-center">@ViewData["Error"]</span>
+        </div>
+    </form>
+</div>

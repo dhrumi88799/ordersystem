@@ -1,0 +1,84 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding: 0;
+    font-size: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    background-color: #efefef;
+    box-shadow: 10px 10px 5px #888888;
+    width: 50%;
+    border: 1px solid #000;
+    padding: 20px 0 0 0;
+    margin: 20px auto;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+
+
+/* Make the image fully responsive */
+.carousel-inner img {
+    width: 100%;
+    height: 200px;
+    margin-bottom:20px
+}
+
+/*my dropdown style*/
+
+ul { /* all lists... */
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+li { /* all list items... */
+    display: inline; /* set the list items left-to-right */
+    position: relative; /* set the origin for child boxes to be positioned from */
+    z-index: 1000;
+}
+
+ul li ul{ /* lists within lists... */
+    position: absolute; /* place them over the top of everything */
+    left: 0; /* align them to the left of the parent list item  - necessary for some older browsers */
+    top: 100%; /* align them to the bottom of the parent list item - again only necessary for older browsers */
+    display: none;/* hide 'em */
+    z-index: 1000;
+}
+
+ul li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
+    display: block; /* show 'em */
+    z-index: 1000;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
